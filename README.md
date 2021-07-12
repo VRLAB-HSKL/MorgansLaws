@@ -4,8 +4,7 @@ Aim of the project is teaching the player boolean algebra. To accomplish this th
 
 # Wiki
 
-In the wiki, you find general information about [Morgans Laws 💻](https://github.com/VRLAB-HSKL/AVR21-3/wiki), as well as a [Developers Guide 📕](https://github.com/VRLAB-HSKL/AVR21-3/wiki/Getting-Started) 
-<br>and a [User Guide 📗](https://github.com/VRLAB-HSKL/AVR21-3/wiki/User-Guide-%F0%9F%93%97)
+In the wiki, you find general information about the project [Morgans Laws 💻](https://github.com/VRLAB-HSKL/AVR21-3/wiki), as well as a [Developers Guide 📕](https://github.com/VRLAB-HSKL/AVR21-3/wiki/Getting-Started) and a [User Guide 📗](https://github.com/VRLAB-HSKL/AVR21-3/wiki/User-Guide-%F0%9F%93%97)
 
 # Screenshots
 
