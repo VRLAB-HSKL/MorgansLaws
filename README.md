@@ -9,7 +9,7 @@ In the wiki, you find general information about the [Morgans Laws 💻](https://
 # Screenshots
 
 <p>
-  <img alt="CompleteCircuit" width="315" src="https://raw.githubusercontent.com/VRLAB-HSKL/AVR21-3/main/documentation/User%20Guide/CompleteCircuit.png">
-  <img alt="Sockets" width="300" src="https://raw.githubusercontent.com/VRLAB-HSKL/AVR21-3/main/documentation/User%20Guide/Sockets.png">
-  <img alt="IncompleteCircuit" width="306" src="https://raw.githubusercontent.com/VRLAB-HSKL/AVR21-3/main/documentation/User%20Guide/IncompleteCircuit.png">
+  <img alt="CompleteCircuit" width="215" src="https://raw.githubusercontent.com/VRLAB-HSKL/AVR21-3/main/documentation/User%20Guide/CompleteCircuit.png">
+  <img alt="Sockets" width="200" src="https://raw.githubusercontent.com/VRLAB-HSKL/AVR21-3/main/documentation/User%20Guide/Sockets.png">
+  <img alt="IncompleteCircuit" width="206" src="https://raw.githubusercontent.com/VRLAB-HSKL/AVR21-3/main/documentation/User%20Guide/IncompleteCircuit.png">
 </p>
