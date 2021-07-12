@@ -1,2 +1,2 @@
-# AVR21-3
-Repository for Kirtz/Klotz
+# MorgansLaws
+Fun little VR project to learn boolean algebra.
