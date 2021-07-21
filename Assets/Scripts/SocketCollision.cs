@@ -32,6 +32,10 @@ public class SocketCollision : MonoBehaviour
             Quaternion targetRotation = transform.parent.rotation;
             gate.transform.rotation = Quaternion.Slerp(sourceRotation, targetRotation, stepSize);
 
+            Rigidbody gateRigidbody = gate.GetComponent<Rigidbody>();
+            gateRigidbody.velocity = Vector3.zero;
+            gateRigidbody.angularVelocity = Vector3.zero;
+
             // enables / disables the socket laser to the gate
             for (int i = 0; i < socket.LaserOutputs.Length; i++)
                 if (i < socket.gate.LaserInputs.Length)
@@ -53,15 +57,19 @@ public class SocketCollision : MonoBehaviour
         Socket socket = GetComponent<Socket>();
         Gate gate = other.GetComponent<Gate>();
 
-        if (gate != null && socket.gate == null)
+        if (gate != null && gate != socket.gate)
         {
+            if (socket.gate != null)
+                OnTriggerExit(socket.gate.GetComponent<Collider>());
+
             socket.gate = gate;
             socket.OnCircuitChanged();
 
             // turn off the physics of the connected gate
             Rigidbody gateRigidbody = socket.gate.GetComponent<Rigidbody>();
             gateRigidbody.useGravity = false;
-            gateRigidbody.isKinematic = true;
+            gateRigidbody.velocity = Vector3.zero;
+            gateRigidbody.angularVelocity = Vector3.zero;
 
             // enable the socket laser aiming to the gates laser inputs
             for (int i = 0; i < socket.LaserOutputs.Length; i++)
@@ -90,7 +98,7 @@ public class SocketCollision : MonoBehaviour
             foreach (LaserOutput LaserOut in socket.LaserOutputs)
                 LaserOut.Disable();
             // disnable the gates laser aiming to the sockets laser inputs
-            foreach (LaserOutput LaserOut in socket.gate.LaserOutputs)
+            foreach (LaserOutput LaserOut in gate.LaserOutputs)
                 LaserOut.Disable();
 
             // disabled the iput connectors of the previously connected gate
@@ -103,7 +111,6 @@ public class SocketCollision : MonoBehaviour
             // turns on the physics of the previously connected gate
             Rigidbody gateRigidbody = other.GetComponent<Rigidbody>();
             gateRigidbody.useGravity = true;
-            gateRigidbody.isKinematic = false;
         }
     }
 }
